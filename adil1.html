@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Gallery</title>
+</head>
+<style type="text/css">
+	body{
+		margin: 0;
+		background-color: lightblue;
+
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+	#super{
+		color: black;
+		font-size: 30px;
+		font-weight: bold;
+		font-family: Imprint MT Shadow;
+		background-color: lightpink;
+		margin-bottom: 16px;
+		border-color: orange;
+		border-style: double;
+		border-width: 14px;
+	}
+	.image{
+		display: none;
+	}
+
+	.image img{
+		width: 100%;
+	}
+	.imageContainer{
+		max-width: 900px;
+		position : relative;
+		margin: auto;		
+	}
+	.left, .right{
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+		width: auto;
+		padding: 20px;
+		margin-top: -35px;
+		color: white;
+		font-weight: bold;
+		font-size: 20px;
+		transition: 1s ease;
+		border-radius: 13px;
+	}
+	.right{
+		right: 0;
+	}
+	.right:hover, .left:hover{
+		background-color: black;
+	}
+
+	.content{
+		color: white;
+		font-size: 25px;
+		position: absolute;
+		top: 15px;
+		width: 100%;
+		text-align: center;
+	}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+</style>
+<!-- <script type="text/javascript">
+	var slide_index = 1;
+	displaySlide(slide_index);
+	function nextSlide(n){
+		displaySlide(slide_index += n);
+	}
+	function displaySlide(n){
+		var slides = document.getElementsByClassName("image");
+		if(n > slides.length){
+			slide_index = 1;
+		}
+		if(n < 1){
+			slide_index = slides.length
+		}
+		for(var i = 0 ; i < slides.length ; i++){
+			slides[i].style.display = "none"
+		}
+
+
+		slides[slide_index - 1].style.display = "block";
+
+}
+</script> -->
+<body>
+	<center id="super">Image carousel</center>
+<div class = "imageContainer">
+	<div class="image fade">
+		<img src="images/Image 1.jpg" width="400px" height="500px"/>
+		<div class="content">Montains with flowers</div>
+	</div>
+
+
+	<div class="image fade">
+		<img src="images/Image 2.jpg" width="400px" height="500px"/>
+		<div class="content">Cool trees</div>
+	</div>
+
+
+	<div class="image fade">
+		<img src="images/Image 3.jpg" width="400px" height="500px"/>
+		<div class="content">Relaxing waterfall</div>
+	</div>
+
+	<div class="image fade">
+		<img src="images/Image 4.jpg" width="400px" height="500px"/>
+		<div class="content">Rare and cool waterfall</div>
+	</div>
+
+	<div class="image fade">
+		<img src="images/Image 5.jpg" width="400px" height="500px"/>
+		<div class="content">Relaxing sunset</div>
+	</div>
+
+	<div class="image fade">
+		<img src="images/Image 6.jpg" width="400px" height="500px"/>
+		<div class="content">Snowy mountain tops</div>
+	</div>
+
+	<div class="image fade">
+		<img src="images/Image 7.jpg" width="400px" height="500px"/>
+		<div class="content">Scenery seen in balcony</div>
+	</div>
+
+	<div class="image fade">
+		<img src="images/Image 8.jpg" width="400px" height="500px"/>
+		<div class="content">Scenery with boat</div>
+	</div>
+
+	<div class="image fade">
+		<img src="images/Image 9.jpg" width="400px" height="500px"/>
+		<div class="content">Beautiful tree with pink flowers</div>
+	</div>
+
+	<div class="image fade">
+		<img src="images/Image 10.jpg" width="400px" height="500px"/>
+		<div class="content">Image containing a boat and high mountains</div>
+	</div>
+
+
+<a class="left" onclick="nextSlide(-1)">&#10094;</a>
+<a class="right" onclick="nextSlide(1)">&#10095;</a>
+
+</div>
+
+</body>
+<script type="text/javascript">
+	var slide_index = 1;
+	displaySlide(slide_index);
+	function nextSlide(n){
+		displaySlide(slide_index += n);
+	}
+	function displaySlide(n){
+		var slides = document.getElementsByClassName("image");
+		if(n > slides.length){
+			slide_index = 1;
+		}
+		if(n < 1){
+			slide_index = slides.length
+		}
+		for(var i = 0 ; i < slides.length ; i++){
+			slides[i].style.display = "none"
+		}
+
+
+		slides[slide_index - 1].style.display = "block";
+
+}
+</script>
+</html>
